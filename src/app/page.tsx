@@ -37,7 +37,7 @@ export default function Home() {
           height={900}
           className={`transform transition-transform duration-1000 z-20 ${
             isAnimated
-              ? "translate-x-[0vw] translate-y-[-40vh] sm:translate-x-[-40vw]  sm:translate-y-[-40vh] w-28 h-28"
+              ? "translate-x-[0vw] translate-y-[-45vh] sm:translate-x-[-40vw]  sm:translate-y-[-40vh] w-28 h-28"
               : "items-center justify-center"
           }`}
           onTransitionEnd={() => setShowText(true)}

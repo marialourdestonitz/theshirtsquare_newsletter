@@ -6,15 +6,15 @@ import { FaArrowRight } from "react-icons/fa";
 const PrivatePolicy = () => {
   return (
     <div className="flex flex-col px-2 sm:px-20 bg-[#303030] w-full min-h-screen overflow-hidden">
-      <div className="fixed top-0 right-0 flex flex-col p-10 pointer-cursor">
+      <div className="fixed top-0 right-0 flex flex-col p-2 pointer-cursor bg-black bg-opacity-40 rounded ">
         <Link
           href={{
             pathname: "/",
           }}
         >
-          <span className="text-[#007BFF] flex gap-2">
+          <span className="text-[#007BFF] font-bold text-xs flex gap-2">
             {" "}
-            <FaArrowRight size={25} color="white" />
+            <FaArrowRight size={20} color="white" />
             Back to Home
           </span>
         </Link>
