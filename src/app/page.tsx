@@ -44,7 +44,7 @@ export default function Home() {
         />
       </div>
       <div
-        className={`absolute top-0 left-0 z-10 w-full h-full flex flex-col items-center justify-center p-8 bg-black bg-opacity-90 transition-opacity duration-700 max-container ${
+        className={`absolute top-0 left-0 z-10 w-full h-full flex flex-col items-center justify-center p-8 bg-black bg-opacity-60 transition-opacity duration-700 max-container ${
           showText ? "opacity-100" : "opacity-0"
         }`}
       >
