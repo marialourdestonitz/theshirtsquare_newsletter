@@ -1,28 +1,31 @@
-import mailchimp from "@mailchimp/mailchimp_marketing";
+// pages/api/subscribe.ts
 
-mailchimp.setConfig({
-  apiKey: process.env.MAILCHIMP_API_KEY,
-  server: process.env.MAILCHIMP_API_SERVER, // e.g. us1
-});
+import { NextApiRequest, NextApiResponse } from 'next';
+import SibApiV3Sdk from 'sib-api-v3-typescript';
 
-export async function POST(request: Request) {
-  const { email } = await request.json();
+const apiInstance = new SibApiV3Sdk.ContactsApi();
+apiInstance.apiKey = process.env.SENDINBLUE_API_KEY;
 
-  if (!email) return new Response(JSON.stringify({ error: "Email is required" }));
+const handleSubscribe=async (req: NextApiRequest, res: NextApiResponse) => {
+  if (req.method !== 'POST') {
+    return res.status(405).end();
+  }
+
+  const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: "Email is required" });
+  }
+
+  const createContact = {
+    email: email,
+    listIds: [process.env.SENDINBLUE_LIST_ID]  // Assuming you have a list to add the contact to
+  };
 
   try {
-    const res = await mailchimp.lists.addListMember(
-      process.env.MAILCHIMP_AUDIENCE_ID!,
-      { 
-        email_address: email, 
-        status: "pending"
-      }
-    );
-
-    return new Response(JSON.stringify({ res }));
-  } catch (error: any) {
-    return new Response(
-      JSON.stringify({ error: JSON.parse(error.response.text).detail })
-    );
+    const response = await apiInstance.createContact(createContact);    
+    return res.status(200).json({ response });
+  } catch (error) {
+    return res.status(500).json({ error: error.message || "There was an error adding the email. Please try again." });
   }
 }

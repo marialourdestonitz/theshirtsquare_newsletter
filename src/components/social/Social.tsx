@@ -4,7 +4,7 @@ import { SocialIcon } from "react-social-icons";
 
 const Social = () => {
   return (
-    <div className="flex items-center justify-center  sm:gap-x-4 py-10 md:w-[100px] animate-fade-bottom  duration-700 ">
+    <div className="flex items-center justify-center md:gap-x-5 py-10 md:w-[100px] animate-fade-bottom  duration-1000 ">
       {socials.map((social) => (
         <a
           href={social.url}
