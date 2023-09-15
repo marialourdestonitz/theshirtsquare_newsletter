@@ -17,7 +17,6 @@ interface NewsletterProps {
 const Newsletter: React.FC<NewsletterProps> = ({
   isDisabled,
   isConsentGiven,
-  setIsConsentGiven,
 }) => {
   const [input, setInput] = useState("");
   const [successMessage, setSuccessMessage] = useState<string>("");
@@ -49,7 +48,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
       return;
     }
 
-    const res = await fetch("/api/handleSubscribe", {
+    const res = await fetch("/api/addSubscription", {
       body: JSON.stringify({ email }),
       headers: { "Content-Type": "application/json" },
       method: "POST",
@@ -135,10 +134,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
               {successMessage && <p>{successMessage}</p>}
               {errorMessage && <p>{errorMessage}</p>}
             </div>
-            <XMarkIcon
-              className="h-5 w-5 cursor-pointer flex-shrink-0 text-[#0000ff]"
-              onClick={dismissMessages}
-            />
+            <XMarkIcon className="h-5 w-5 cursor-pointer flex-shrink-0 text-[#0000ff]" />
           </div>
         )}
       </div>

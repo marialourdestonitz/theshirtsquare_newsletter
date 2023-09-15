@@ -1,31 +1,28 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import SibApiV3Sdk from 'sib-api-v3-typescript';
+import mailchimp from "@mailchimp/mailchimp_marketing";
 
-const handleSubscription = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method !== 'POST') {
-    return res.status(405).end();
-  }
+mailchimp.setConfig({
+  apiKey: process.env.MAILCHIMP_API_KEY,
+  server: process.env.MAILCHIMP_API_SERVER, // e.g. us1
+});
 
-  const { email } = req.body;
+export async function POST(request: Request) {
+  const { email } = await request.json();
 
-  if (!email) {
-    return res.status(400).json({ error: "Email is required" });
-  }
-
-  const apiInstance = new SibApiV3Sdk.ContactsApi();
-  const apiKey = apiInstance.authentications['apiKey'];
-  apiKey.apiKey = process.env._API_KEY as string;
-
-  const createContact = new SibApiV3Sdk.CreateContact();
-  createContact.email = email;
-  createContact.listIds = [2]; 
+  if (!email) return new Response(JSON.stringify({ error: "Email is required" }));
 
   try {
-    const response = await apiInstance.createContact(createContact);
-    return res.status(200).json(response);
-  } catch (error) {
-    return res.status(500).json({ error: error.message || "There was an error adding the email. Please try again." });
-  }
-};
+    const res = await mailchimp.lists.addListMember(
+      process.env.MAILCHIMP_AUDIENCE_ID!,
+      { 
+        email_address: email, 
+        status: "pending"
+      }
+    );
 
-export default handleSubscription;
+    return new Response(JSON.stringify({ res }));
+  } catch (error: any) {
+    return new Response(
+      JSON.stringify({ error: JSON.parse(error.response.text).detail })
+    );
+  }
+}
