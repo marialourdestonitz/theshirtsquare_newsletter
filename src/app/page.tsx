@@ -12,6 +12,7 @@ export default function Home() {
   const [isConsentGiven, setIsConsentGiven] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const timer = setTimeout(() => {
       setIsAnimated(true);
     }, 1000);
@@ -19,15 +20,15 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-gradient-to-r from-blue-900 via-black to-blue-800 flex flex-col w-full min-h-screen max-container items-center justify-center overflow-auto relative ">
+    <main className="bg-gradient-to-r from-blue-900 via-black to-blue-800 top-0 left-0 flex flex-col w-full min-h-screen max-container items-center justify-center overflow-auto relative ">
       <Image
         src="/theshirtsquare.png"
         alt="theshirtsquare_logo"
         width={900}
         height={900}
-        className={` absolute transform transition duration-1000 z-20 ${
+        className={` absolute  transition duration-1000 ${
           isAnimated
-            ? "translate-x-[-35vw] translate-y-[-85vh] md:translate-x-[-40vw]  md:translate-y-[-50vh] w-20 h-20"
+            ? "translate-x-[-35vw] translate-y-[-85vh] md:translate-x-[-40vw]  md:translate-y-[-45vh] w-20 h-20"
             : "items-center justify-center p-10 opacity-100"
         }`}
         onTransitionEnd={() => setShowText(true)}
@@ -113,13 +114,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" flex items-center justify-center order-0 md:order-2 animate-fade-in transition duration-700">
+        <div className="flex items-center justify-center order-0 md:order-2 animate-fade-in transition duration-700">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"
             width={900}
             height={900}
-            className="w-full h-full md:top-0 mt-16"
+            className="w-full h-full md:mt-0 mt-16"
           />
         </div>
       </div>
