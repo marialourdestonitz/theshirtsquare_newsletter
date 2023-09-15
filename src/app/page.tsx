@@ -25,10 +25,10 @@ export default function Home() {
         alt="theshirtsquare_logo"
         width={900}
         height={900}
-        className={` absolute transform transition-transform duration-1000 z-20 ${
+        className={` absolute transform transition duration-1000 z-20 ${
           isAnimated
-            ? "translate-x-[0vw] translate-y-[-16vh] md:translate-x-[-38vw]  md:translate-y-[-45vh] w-24 h-24"
-            : "items-center justify-center"
+            ? "translate-x-[-35vw] translate-y-[-85vh] md:translate-x-[-40vw]  md:translate-y-[-50vh] w-20 h-20"
+            : "items-center justify-center p-10 opacity-100"
         }`}
         onTransitionEnd={() => setShowText(true)}
       />
@@ -37,12 +37,12 @@ export default function Home() {
           showText ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="top-0 left-0 z-10 w-full h-full flex flex-col items-center justify-center p-8 transition-opacity order-1 md:order-2   duration-700 ">
+        <div className="top-0 left-0 z-10 w-full h-full flex flex-col items-center justify-center px-4 transition-opacity order-1 md:order-2   duration-700 ">
           <div className="text-white text-center items-center justify-center w-full h-full">
-            <h1 className="text-4xl sm:text-4xl lg:text-6xl text-[#FFDAB9] font-extrabold mt-8 animate-title transition duration-700">
+            <h1 className="text-3xl sm:text-8xl lg:text-6xl text-[#FFDAB9] font-bold mt-4 animate-title transition duration-700">
               Your Style, Your Print
             </h1>
-            <h2 className="text-2xl sm:text-4xl lg:text-4xl text-[#007BFF] font-semibold mt-2 animate-fade-in  duration-700">
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl text-[#007BFF] font-bold mt-2 animate-fade-in  duration-700">
               We Bring it to Life!
             </h2>
 
@@ -113,13 +113,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" flex items-center justify-center  order-0 md:order-2 animate-fade-in transition duration-700">
+        <div className=" flex items-center justify-center order-0 md:order-2 animate-fade-in transition duration-700">
           <Image
             src="/banner.png"
-            alt="theshirtsquare_logo"
+            alt="theshirtsquare_model"
             width={900}
             height={900}
-            className="w-full h-full"
+            className="w-full h-full md:top-0 mt-16"
           />
         </div>
       </div>
