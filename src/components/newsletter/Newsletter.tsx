@@ -26,7 +26,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
   const buttonRef = useRef<HTMLButtonElement>(null);
   const { to, fromTo, set } = gsap;
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const email = input;
@@ -41,6 +41,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
       });
       to(button, { keyframes: getTrailsKeyframes(button) });
     }
+
     if (!isConsentGiven) {
       setErrorMessage(
         "You must agree to receive newsletters and promotional emails before subscribing.",
@@ -48,7 +49,7 @@ const Newsletter: React.FC<NewsletterProps> = ({
       return;
     }
 
-    const res = await fetch("/api/addSubscription", {
+    const res = await fetch("/api/handleSubscribe", {
       body: JSON.stringify({ email }),
       headers: { "Content-Type": "application/json" },
       method: "POST",
@@ -68,17 +69,13 @@ const Newsletter: React.FC<NewsletterProps> = ({
     }
 
     setSuccessMessage(
-      `Thank you ${data.res.email_address} for subscribing! Please check your email to confirm your subscription.`,
+      `Thank you ${email} for subscribing! Please check your email to confirm your subscription.`,
     );
+
     setErrorMessage("");
     setTimeout(() => {
       setSuccessMessage("");
     }, 5000);
-  };
-
-  const dismissMessages = () => {
-    setSuccessMessage("");
-    setErrorMessage("");
   };
 
   return (
