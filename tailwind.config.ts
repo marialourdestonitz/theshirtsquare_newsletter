@@ -67,22 +67,6 @@ const config: Config = {
             opacity: "100%",
           },
         },
-        "fade-right": {
-          "0%": {
-            opacity: "0%",
-          },
-          "100%": {
-            opacity: "100%",
-          },
-        },
-        "fade-in-3": {
-          "0%": {
-            opacity: "0%",
-          },
-          "100%": {
-            opacity: "100%",
-          },
-        },
       }
     },
   },

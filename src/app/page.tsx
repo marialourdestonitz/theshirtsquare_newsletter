@@ -20,26 +20,17 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-gradient-to-r from-blue-900 via-black to-blue-800 top-0 left-0 flex flex-col w-full min-h-screen items-center justify-center overflow-auto relative ">
+    <main className="bg-gradient-to-r from-blue-900 via-black to-blue-800 top-0 left-0 flex flex-col w-full min-h-screen overflow-hidden relative">
       <Image
         src="/theshirtsquare.png"
-        alt="theshirtsquare_logo"
-        width={900}
-        height={900}
-        className={`relative transform transition-transform duration-1000 ${
-          isAnimated
-            ? "translate-x-[-35vw] translate-y-[-0vh] md:translate-x-[-40vw]  md:translate-y-[5vh] w-20 h-20"
-            : "translate-x-[0vw] md:translate-x-[0vw] md:translate-y-[0vh] translate-y-[-20vh] "
-        }`}
-        onTransitionEnd={() => setShowText(true)}
+        alt="theshirtsquare"
+        width={100}
+        height={85}
+        className="w-14 h-14 md:w-28 md:h-28 absolute animate-fade-top duration-700 items-start ml-10"
       />
-      <div
-        className={`flex flex-col md:flex-row w-full h-full items-center justify-center relative ${
-          showText ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <div className="top-0 left-0 z-10 w-full h-full flex flex-col items-center justify-center px-4  order-1 md:order-2">
-          <div className="text-white text-center items-center justify-center">
+      <div className="flex flex-col md:flex-row w-full h-full items-center justify-center px-5">
+        <div className=" w-full h-full flex flex-col items-center justify-center px-2  md:mt-24 mt-2 order-1 md:order-2">
+          <div className="text-white text-center items-center justify-center mt-2 md:mt-10">
             <h1 className="text-3xl sm:text-8xl lg:text-6xl text-[#FFDAB9] font-bold  animate-title transition duration-700">
               Your Style, Your Print
             </h1>
@@ -47,8 +38,8 @@ export default function Home() {
               We Bring it to Life!
             </h2>
 
-            <div className="flex flex-col items-center justify-center mt-2 p-4  mx-auto max-w-2xl ">
-              <p className="mt-2 text-justify leading-relaxed mb-5 animate-fade-top px-5 duration-700 text-base">
+            <div className="flex flex-col items-center justify-center mt-2 px-10    mx-auto max-w-2xl ">
+              <p className="mt-2 text-justify leading-relaxed mb-5 animate-fade-in px-5 duration-700 text-base">
                 Wenn Du jetzt unseren Newsletter abonnierst, erfährst Du nicht
                 nur als Erster von unseren neuesten Angeboten, Du bekommst auch
                 einen Kapuzenpulli, einen Pullover, ein T-Shirt, eine Mütze oder
@@ -109,26 +100,20 @@ export default function Home() {
                   setIsConsentGiven={setIsConsentGiven}
                 />
               </div>
-
               <Social />
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center order-0 md:order-2 animate-fade-in transition duration-500">
+        <div className="mt-10 items-center justify-center px-4 order-0 md:order-2 animate-fade-in transition duration-700">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"
             width={900}
             height={900}
-            className="w-full h-full"
           />
         </div>
       </div>
-      <footer
-        className={`w-full animate-fade-top transition duration-700 ${
-          showText ? "opacity-100" : "opacity-0"
-        }`}
-      >
+      <footer className="w-full animate-fade-top transition duration-700">
         <Footer />
       </footer>
     </main>
