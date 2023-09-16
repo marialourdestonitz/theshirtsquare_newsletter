@@ -15,7 +15,7 @@ export const socials = [
   {
     id: 3,
     name: "Pinterest",
-    url: "https://www.pinterest.com/theshirtsquare",
+    url: "https://www.pinterest.com/dantonitz",
   },
 ];
 

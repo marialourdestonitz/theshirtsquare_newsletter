@@ -20,15 +20,16 @@ export default function Home() {
         alt="theshirtsquare_logo"
         width={900}
         height={900}
-        className="absolute duration-1000 transition-transform  ease-in-out translate-x-[0vw] translate-y-[0vh] sm:translate-x-[10vw]  sm:translate-y-[0vh] w-28 h-28"
+        className="absolute top-50% left-50% transform -translate-x-50% -translate-y-50% w-28 h-28 animate-moveToCorner  duration-1000"
       />
+
       <div className="flex flex-col md:flex-row w-full h-full items-center justify-center px-5">
         <div className="w-full h-full flex flex-col items-center justify-center px-2 md:mt-5 mt-2 order-1 md:order-2">
           <div className="text-white text-center items-center justify-center mt-2 md:mt-10">
             <h1 className="text-3xl sm:text-8xl lg:text-6xl text-[#FFDAB9] font-bold animate-title transition duration-700">
               Your Style, Your Print
             </h1>
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl text-[#007BFF] font-bold mt-2 animate-fade-in duration-700">
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl text-[#007BFF] font-bold mt-2 animate-fade-in delay-500 duration-700">
               We Bring it to Life!
             </h2>
 
@@ -53,7 +54,7 @@ export default function Home() {
                   />
                   <label
                     htmlFor="consentCheckbox"
-                    className="block w-16 h-5 sm:w-10 sm:h-6 border-2 rounded-md cursor-pointer relative"
+                    className="block w-10 h-5 sm:w-10 sm:h-6 border-2 rounded-md cursor-pointer relative"
                   >
                     {isConsentGiven && (
                       <svg
@@ -92,7 +93,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-20 md:mt-2 items-center justify-center px-4 order-0 md:order-2 animate-fade-in transition duration-700">
+        <div className="mt-20 md:mt-2 items-center justify-center px-4 order-0 md:order-2 animate-fade-in transition duration-500">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"

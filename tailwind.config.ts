@@ -15,10 +15,10 @@ const config: Config = {
       animation:{
         title: "title 1s ease-out forwards",
         "fade-in": "fade-in 4s ease-in-out forwards",
-        "fade-in-3": "fade-in-3 2s ease-in-out forwards",
         "fade-right": "fade-right 3s ease-in-out forwards",
         "fade-top": "fade-top 4s ease-in-out forwards",
         "fade-bottom": "fade-bottom 2s ease-in-out forwards",
+        'moveToCorner': 'moveToCorner 2s forwards',
       },
       keyframes:{
         title: {
@@ -65,6 +65,13 @@ const config: Config = {
           },
           "100%": {
             opacity: "100%",
+          },
+        },
+        "moveToCorner": {
+          'to': {
+            'top': '0',
+            'left': '10vw',
+            'transform': 'translateX(0%) translateY(0%)',
           },
         },
       }
