@@ -26,11 +26,6 @@
     );
   }
 
-  .max-container {
-    max-width: 1536px;
-    margin: auto;
-  }
-
 
   .newsletter-form {
     --primary: #002affae;
