@@ -26,10 +26,10 @@ export default function Home() {
         alt="theshirtsquare_logo"
         width={900}
         height={900}
-        className={` absolute transition duration-1000 ${
+        className={`relative transform transition-transform duration-1000 ${
           isAnimated
-            ? "relative translate-x-[-35vw] translate-y-[-0vh] md:translate-x-[-40vw]  md:translate-y-[-45vh] w-20 h-20"
-            : "translate-x-[0vw] translate-y-[0vh] "
+            ? "translate-x-[-35vw] translate-y-[-0vh] md:translate-x-[-40vw]  md:translate-y-[5vh] w-20 h-20"
+            : "translate-x-[0vw] md:translate-x-[0vw] md:translate-y-[0vh] translate-y-[-20vh] "
         }`}
         onTransitionEnd={() => setShowText(true)}
       />
@@ -47,8 +47,8 @@ export default function Home() {
               We Bring it to Life!
             </h2>
 
-            <div className="flex flex-col items-center justify-center mt-2 py-4  mx-auto max-w-2xl ">
-              <p className="mt-2 text-justify leading-relaxed mb-5 animate-fade-top  duration-700 text-base">
+            <div className="flex flex-col items-center justify-center mt-2 p-4  mx-auto max-w-2xl ">
+              <p className="mt-2 text-justify leading-relaxed mb-5 animate-fade-top px-5 duration-700 text-base">
                 Wenn Du jetzt unseren Newsletter abonnierst, erfährst Du nicht
                 nur als Erster von unseren neuesten Angeboten, Du bekommst auch
                 einen Kapuzenpulli, einen Pullover, ein T-Shirt, eine Mütze oder
