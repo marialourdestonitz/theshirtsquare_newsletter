@@ -20,16 +20,16 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-gradient-to-r from-blue-900 via-black to-blue-800 top-0 left-0 flex flex-col w-full min-h-screen max-container items-center justify-center overflow-auto relative ">
+    <main className="bg-gradient-to-r from-blue-900 via-black to-blue-800 top-0 left-0 flex flex-col w-full min-h-screen items-center justify-center overflow-auto relative ">
       <Image
         src="/theshirtsquare.png"
         alt="theshirtsquare_logo"
         width={900}
         height={900}
-        className={` absolute  transition duration-1000 ${
+        className={` absolute transition duration-1000 ${
           isAnimated
-            ? "translate-x-[-35vw] translate-y-[-85vh] md:translate-x-[-40vw]  md:translate-y-[-45vh] w-20 h-20"
-            : "items-center justify-center p-10 opacity-100"
+            ? "relative translate-x-[-35vw] translate-y-[-0vh] md:translate-x-[-40vw]  md:translate-y-[-45vh] w-20 h-20"
+            : "translate-x-[0vw] translate-y-[0vh] "
         }`}
         onTransitionEnd={() => setShowText(true)}
       />
@@ -38,9 +38,9 @@ export default function Home() {
           showText ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="top-0 left-0 z-10 w-full h-full flex flex-col items-center justify-center px-4 transition-opacity order-1 md:order-2   duration-700 ">
-          <div className="text-white text-center items-center justify-center w-full h-full">
-            <h1 className="text-3xl sm:text-8xl lg:text-6xl text-[#FFDAB9] font-bold mt-4 animate-title transition duration-700">
+        <div className="top-0 left-0 z-10 w-full h-full flex flex-col items-center justify-center px-4  order-1 md:order-2">
+          <div className="text-white text-center items-center justify-center">
+            <h1 className="text-3xl sm:text-8xl lg:text-6xl text-[#FFDAB9] font-bold  animate-title transition duration-700">
               Your Style, Your Print
             </h1>
             <h2 className="text-3xl sm:text-4xl lg:text-4xl text-[#007BFF] font-bold mt-2 animate-fade-in  duration-700">
@@ -114,18 +114,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center order-0 md:order-2 animate-fade-in transition duration-700">
+        <div className="flex items-center justify-center order-0 md:order-2 animate-fade-in transition duration-500">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"
             width={900}
             height={900}
-            className="w-full h-full md:mt-0 mt-16"
+            className="w-full h-full"
           />
         </div>
       </div>
       <footer
-        className={`w-full animate-fade-top transition duration 700 ${
+        className={`w-full animate-fade-top transition duration-700 ${
           showText ? "opacity-100" : "opacity-0"
         }`}
       >

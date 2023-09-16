@@ -12,7 +12,7 @@ const Social = () => {
           rel="noopener noreferrer"
           key={social.id}
           aria-label={social.name}
-          className="group flex items-center justify-center flex-1 animate-fade-in-3 cursor-pointer py-2 px-4 md:p-2 transition duration-200 ease-out transform hover:scale-105 rounded-[5px] hover:shadow-md hover:bg-opacity-10 hover:bg-white"
+          className="group flex items-center justify-center animate-fade-in-3 cursor-pointer px-4 md:p-2 transition duration-200 ease-out transform hover:scale-105 rounded-[5px] hover:shadow-md hover:bg-opacity-10 hover:bg-white"
         >
           <SocialIcon
             url={social.url}
