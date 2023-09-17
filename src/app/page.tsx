@@ -13,6 +13,10 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+  const toggleConsent = () => {
+    setIsConsentGiven((prevState) => !prevState);
+  };
+
   return (
     <main className="bg-gradient-to-r from-blue-900 via-black to-blue-800 top-0 left-0 flex flex-col w-full min-h-screen overflow-hidden relative">
       <Image
@@ -21,8 +25,8 @@ export default function Home() {
         width={150}
         height={100}
         layout="intrinsic"
+        loading="lazy"
         sizes="(min-width: 720px) 144px, calc(95.5vw - 19px)"
-        priority
         className="absolute items-start ml-0 top-0 md:ml-10"
       />
 
@@ -108,7 +112,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <footer className="w-full animate-fade-top transition duration-700">
+      <footer className="w-full animate-fade-bottom transition duration-700">
         <Footer />
       </footer>
     </main>
