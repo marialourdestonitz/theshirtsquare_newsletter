@@ -6,7 +6,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { gsap } from "gsap";
-import { FormEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 interface NewsletterProps {
   isDisabled: boolean;
@@ -17,6 +17,7 @@ interface NewsletterProps {
 const Newsletter: React.FC<NewsletterProps> = ({
   isDisabled,
   isConsentGiven,
+  setIsConsentGiven,
 }) => {
   const [input, setInput] = useState("");
   const [successMessage, setSuccessMessage] = useState<string>("");
@@ -30,6 +31,8 @@ const Newsletter: React.FC<NewsletterProps> = ({
 
     const email = input;
     const button = buttonRef.current;
+
+    setIsConsentGiven(false);
 
     if (!email || !button) return;
 
