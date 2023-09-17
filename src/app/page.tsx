@@ -20,6 +20,9 @@ export default function Home() {
         alt="theshirtsquare_logo"
         width={500}
         height={500}
+        layout="intrinsic"
+        sizes="(min-width: 720px) 144px, calc(95.5vw - 19px)"
+        priority
         className="absolute w-36 h-32 items-start ml-0 top-0 md:ml-10"
       />
 
@@ -93,12 +96,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-20 md:mt-2 items-center justify-center px-4 order-0 md:order-2">
+        <div className="mt-20 md:mt-2 mx-auto px-4 order-0 md:order-2">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"
             width={900}
             height={900}
+            layout="intrinsic"
+            priority
+            sizes="(min-width: 720px) 505px, calc(95.5vw - 19px)"
           />
         </div>
       </div>
