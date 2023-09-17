@@ -20,7 +20,7 @@ export default function Home() {
         alt="theshirtsquare_logo"
         width={900}
         height={900}
-        className="absolute top-50% left-50% transform -translate-x-50% -translate-y-50% w-28 h-28 animate-moveToCorner  duration-1000"
+        className="absolute w-28 h-28 items-start ml-2 md:ml-10"
       />
 
       <div className="flex flex-col md:flex-row w-full h-full items-center justify-center px-5">
@@ -54,7 +54,7 @@ export default function Home() {
                   />
                   <label
                     htmlFor="consentCheckbox"
-                    className="block w-10 h-5 sm:w-10 sm:h-6 border-2 rounded-md cursor-pointer relative"
+                    className="block w-14 h-5 sm:w-10 sm:h-6 border-2 rounded-md cursor-pointer relative"
                   >
                     {isConsentGiven && (
                       <svg
@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-20 md:mt-2 items-center justify-center px-4 order-0 md:order-2 animate-fade-in transition duration-500">
+        <div className="mt-20 md:mt-2 items-center justify-center px-4 order-0 md:order-2 transition-all">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"

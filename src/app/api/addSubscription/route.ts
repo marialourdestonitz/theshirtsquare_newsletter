@@ -1,8 +1,8 @@
 import mailchimp from "@mailchimp/mailchimp_marketing";
 
 mailchimp.setConfig({
-  apiKey: process.env.MAILCHIMP_API_KEY,
-  server: process.env.MAILCHIMP_API_SERVER, 
+  apiKey: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
+  server: process.env.NEXT_PUBLIC_MAILCHIMP_API_SERVER, 
 });
 
 export async function POST(request: Request) {
@@ -12,7 +12,7 @@ export async function POST(request: Request) {
 
   try {
     const res = await mailchimp.lists.addListMember(
-      process.env.MAILCHIMP_AUDIENCE_ID!,
+      process.env.NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID!,
       { 
         email_address: email, 
         status: "pending"
