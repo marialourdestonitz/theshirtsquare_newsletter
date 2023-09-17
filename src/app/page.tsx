@@ -18,16 +18,16 @@ export default function Home() {
       <Image
         src="/theshirtsquare.png"
         alt="theshirtsquare_logo"
-        width={500}
-        height={500}
+        width={150}
+        height={100}
         layout="intrinsic"
         sizes="(min-width: 720px) 144px, calc(95.5vw - 19px)"
         priority
-        className="absolute w-36 h-32 items-start ml-0 top-0 md:ml-10"
+        className="absolute items-start ml-0 top-0 md:ml-10"
       />
 
       <div className="flex flex-col md:flex-row w-full h-full items-center justify-center px-5">
-        <div className="w-full h-full flex flex-col items-center justify-center px-2 md:mt-5 mt-2 order-1 md:order-2">
+        <div className="w-full h-full flex flex-col items-center justify-center px-2 md:mt-10 mt-2 order-1 md:order-2">
           <div className="text-white text-center items-center justify-center mt-2 md:mt-10">
             <h1 className="text-3xl sm:text-8xl lg:text-6xl text-[#FFDAB9] font-bold animate-title transition duration-700">
               Your Style, Your Print
@@ -57,7 +57,7 @@ export default function Home() {
                   />
                   <label
                     htmlFor="consentCheckbox"
-                    className="block w-14 h-5 sm:w-10 sm:h-6 border-2 rounded-md cursor-pointer relative"
+                    className="block w-16 h-5 sm:w-10 sm:h-6 border-2 rounded-md cursor-pointer relative"
                   >
                     {isConsentGiven && (
                       <svg
@@ -96,7 +96,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-20 md:mt-2 mx-auto px-4 order-0 md:order-2">
+        <div className=" mt-24 md:mt-2 mx-auto px-4 order-0 md:order-2">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"
@@ -104,7 +104,7 @@ export default function Home() {
             height={900}
             layout="intrinsic"
             priority
-            sizes="(min-width: 720px) 505px, calc(95.5vw - 19px)"
+            sizes="(min-width: 720px) 505px,  100vw"
           />
         </div>
       </div>
