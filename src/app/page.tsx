@@ -18,9 +18,9 @@ export default function Home() {
       <Image
         src="/theshirtsquare.png"
         alt="theshirtsquare_logo"
-        width={900}
-        height={900}
-        className="absolute w-28 h-28 items-start ml-2 md:ml-10"
+        width={500}
+        height={500}
+        className="absolute w-36 h-32 items-start ml-0 top-0 md:ml-10"
       />
 
       <div className="flex flex-col md:flex-row w-full h-full items-center justify-center px-5">
@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-20 md:mt-2 items-center justify-center px-4 order-0 md:order-2 transition-all">
+        <div className="mt-20 md:mt-2 items-center justify-center px-4 order-0 md:order-2">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"
