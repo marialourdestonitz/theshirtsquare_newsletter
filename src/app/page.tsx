@@ -13,10 +13,6 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  const toggleConsent = () => {
-    setIsConsentGiven((prevState) => !prevState);
-  };
-
   return (
     <main className="bg-gradient-to-r from-blue-900 via-black to-blue-800 top-0 left-0 flex flex-col w-full min-h-screen overflow-hidden relative">
       <Image
@@ -29,7 +25,6 @@ export default function Home() {
         sizes="(min-width: 720px) 150px, calc(95.5vw - 19px)"
         className="absolute items-start ml-0 top-0 md:ml-10"
       />
-
       <div className="flex flex-col md:flex-row w-full h-full items-center justify-center px-5">
         <div className="w-full h-full flex flex-col items-center justify-center px-2 md:mt-10 mt-2 order-1 md:order-2">
           <div className="text-white text-center items-center justify-center mt-2 md:mt-10">
@@ -100,14 +95,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" mt-24 md:mt-2 mx-auto px-4 order-0 md:order-2">
+        <div className=" mt-24 md:mt-2 mx-auto px-4 transition  order-0 md:order-2">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"
             width={900}
             height={900}
             layout="intrinsic"
-            loading="lazy"
             sizes="(min-width: 2560px) calc(6.36vw + 491px), (min-width: 1060px) calc(13.04vw + 321px), (min-width: 780px) calc(93.85vw - 521px), calc(100vw - 72px)"
           />
         </div>
