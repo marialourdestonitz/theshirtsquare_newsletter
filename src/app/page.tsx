@@ -25,8 +25,8 @@ export default function Home() {
         width={150}
         height={100}
         layout="intrinsic"
-        loading="lazy"
-        sizes="(min-width: 720px) 144px, calc(95.5vw - 19px)"
+        priority
+        sizes="(min-width: 720px) 150px, calc(95.5vw - 19px)"
         className="absolute items-start ml-0 top-0 md:ml-10"
       />
 
@@ -108,7 +108,7 @@ export default function Home() {
             height={900}
             layout="intrinsic"
             priority
-            sizes="(min-width: 720px) 505px,  100vw"
+            sizes="(min-width: 2560px) calc(6.36vw + 491px), (min-width: 1060px) calc(13.04vw + 321px), (min-width: 780px) calc(93.85vw - 521px), calc(100vw - 72px)"
           />
         </div>
       </div>
