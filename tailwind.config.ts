@@ -13,9 +13,8 @@ const config: Config = {
         "outline-gray": "inset 0 0 0 1.5px #525252",
       },
       animation:{
-        title: "title 1s ease-out forwards",
+        "title": "title 1s ease-out forwards",
         "fade-in": "fade-in 4s ease-in-out forwards",
-        "fade-right": "fade-right 3s ease-in-out forwards",
         "fade-top": "fade-top 4s ease-in-out forwards",
         "fade-bottom": "fade-bottom 2s ease-in-out forwards",
         'moveToCorner': 'moveToCorner 2s forwards',
