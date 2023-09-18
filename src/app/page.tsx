@@ -107,7 +107,7 @@ export default function Home() {
             width={900}
             height={900}
             layout="intrinsic"
-            priority
+            loading="lazy"
             sizes="(min-width: 2560px) calc(6.36vw + 491px), (min-width: 1060px) calc(13.04vw + 321px), (min-width: 780px) calc(93.85vw - 521px), calc(100vw - 72px)"
           />
         </div>
