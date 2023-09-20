@@ -275,12 +275,13 @@ const PrivatePolicy = () => {
             </li>
             <li>
               in Kooperation mit:
-              <a
-                className="text-blue-500"
+              <Link
                 href="http://ortner-rechtsanwalt.at/"
+                className="italic text-blue-700"
               >
-                Rechtsanwalt Wien Ortner
-              </a>
+                <span>http://ortner-rechtsanwalt.at/ - </span>
+                <span>Rechtsanwalt Wien Ortner</span>
+              </Link>
             </li>
           </ul>
         </div>

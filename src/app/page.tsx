@@ -27,9 +27,9 @@ export default function Home() {
         className="absolute items-start ml-0 top-0 md:ml-10 animate-right transition delay-700"
       />
 
-      <div className="flex flex-col md:flex-row w-full h-full items-center justify-center px-5">
-        <div className="w-full h-full flex flex-col items-center justify-center px-2 md:mt-10 mt-2 order-1 md:order-2">
-          <div className="text-white text-center items-center justify-center mt-2 md:mt-10">
+      <div className="flex flex-col md:flex-row items-center justify-center ">
+        <div className="w-full h-full flex flex-col items-center justify-center px-2 md:mt-20 mt-2 order-1 md:order-2">
+          <div className="text-white text-center items-center justify-center mt-2 md:mt-14 ">
             <h1 className="text-3xl sm:text-8xl lg:text-6xl text-[#FFDAB9] font-bold animate-title transition duration-700">
               Your Style, Your Print
             </h1>
@@ -37,8 +37,8 @@ export default function Home() {
               We Bring it to Life!
             </h2>
 
-            <div className="flex flex-col items-center justify-center mt-2 px-10 mx-auto max-w-2xl">
-              <p className="mt-2 text-justify leading-relaxed mb-5 animate-fade-in px-5 duration-700 text-base">
+            <div className=" w-full flex flex-col items-center justify-center mt-2 px-10 mx-auto max-w-2xl">
+              <p className="mt-2 text-justify leading-relaxed mb-5 animate-fade-in px-8 duration-700 text-base">
                 Wenn Du jetzt unseren Newsletter abonnierst, erfährst Du nicht
                 nur als Erster von unseren neuesten Angeboten, Du bekommst auch
                 einen Kapuzenpulli, einen Pullover, ein T-Shirt, eine Mütze oder
@@ -78,13 +78,14 @@ export default function Home() {
                     )}
                   </label>
                   <span className="text-sm sm:text-sm text-justify ml-1 px-2">
-                    I agree to subscribe to updates and promotional
-                    communications from Theshirtsquare.com. We value and respect
-                    your privacy. Please review our{" "}
+                    Ich bin damit einverstanden, Neuigkeiten und
+                    Werbemitteilungen von Theshirtsquare.com zu erhalten. Wir
+                    schätzen und respektieren Ihre Privatsphäre. Bitte lesen Sie
+                    unsere{" "}
                     <Link href="/privacy_policy" className="text-blue-500 px-2">
-                      Privacy Policy
+                      Datenschutzrichtlinie
                     </Link>{" "}
-                    for more information
+                    für weitere Informationen.
                   </span>
                 </div>
                 <Newsletter
@@ -97,7 +98,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" mt-24 md:mt-2 mx-auto px-4 transition order-0 md:order-2 animate-fade-in duration-700">
+        <div className="mt-24 md:mt-2 mx-auto  transition-all order-0 md:order-2 animate-fade-in duration-700">
           <Image
             src="/banner.png"
             alt="theshirtsquare_model"
