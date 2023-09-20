@@ -8,12 +8,14 @@ const Footer = () => {
       <span className="order-1 md:order-1 text-[10px] text-sm ">
         &copy;-2023 Theshirtsquare. All rights reserved.
       </span>
-      <Link href="/privacy_policy " className="order-0 md:order-2 ">
-        <span className="">Datenschutzrichtlinie</span>
-      </Link>
-      <Link href="/impressum" className="order-0 md:order-2 ">
-        <span className="">Impressum</span>
-      </Link>
+      <span className="order-0 md:order-2 flex gap-4">
+        <Link href="/privacy_policy">
+          <span className="">Datenschutzrichtlinie</span>
+        </Link>
+        <Link href="/impressum" className="order-0 md:order-2 ">
+          <span className="">Impressum</span>
+        </Link>
+      </span>
     </div>
   );
 };
